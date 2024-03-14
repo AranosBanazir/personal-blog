@@ -1,5 +1,6 @@
 :root{
-    --border-thickness: 2px
+    --border-thickness: 2px;
+    --active-border-color: rgb(64, 180, 180);
 }
 
 html{
@@ -21,11 +22,41 @@ header{
     justify-content: end;
 }
 
+/* Day Night image */
 header img{
     height: 50px;
     width: 50px;
-    background-color: dimgray;
+    background-color: transparent;
     border-radius: 10px;
+}
+
+header img:hover{
+
+    background-color: rgba(204, 223, 119, 0.377);
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+head div{
+    position: relative;
+    display: block;
+}
+
+header div p {
+    display: none;
+    position: absolute;
+    right: 75px;
+    top: 20px;
+    background-color: dimgray;
+    color: white;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+header div:hover p{
+    display: block;
+    
 }
 
 .spacer{
@@ -74,6 +105,8 @@ header img{
 #right-panel h2{
     align-self: center;
     justify-self: center;
+    font-size: 250%;
+    margin-bottom: 50px;
 }
 
 form{
@@ -97,6 +130,25 @@ form{
 
 }
 
+#right-panel input, textarea{
+    box-shadow: -1px 1px dimgray;
+
+}
+
+#right-panel input:focus, textarea:focus{
+    box-shadow: none;
+    outline: 2px solid var(--active-border-color);
+    border: 1px solid var(--active-border-color);
+}
+
+#right-panel label::after{
+    content: '  *';
+    color: red;
+}
+
+#content-div{
+    margin-top: 10px;
+}
 
 .blog-img{
     height: 50%;
@@ -113,4 +165,13 @@ form{
 h1{
     font-size: 350%;
     color: white;
+}
+
+button{
+    background-color: black;
+    height: 30px;
+    width: 101%;
+    color: white;
+    font-weight: bold;
+    text-align: center;
 }

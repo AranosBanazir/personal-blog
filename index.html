@@ -7,18 +7,21 @@
     <title>Personal Blog</title>
 </head>
     <header>
-        <img src="./assets/images/sun.webp" alt="Light/Dark Mode button"/>
+        <div>
+            <img id="day-night-pic" onclick = 'themeSwitch()' src="./assets/images/sun.webp" alt="Light/Dark Mode button"/>
+            <p id = "day-night-tooltip">Click to change theme modes.</p>
+        </div>
     </header>
-<body>
+<body class = "background">
     <div class="spacer"></div>
-    <section id="main-container">
-        <div id="left-panel">
+    <section id="main-container" class = "background">
+        <div id="left-panel" class = "background">
           <div class="blog-img">
             <h1>My First Blog</h1>
           </div>
         </div>
 
-        <div id="right-panel" class = "form-container">
+        <div class = "background" id="right-panel" >
 
             <h2>What's on your mind?</h2>
             <form>
