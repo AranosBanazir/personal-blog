@@ -1,0 +1,116 @@
+:root{
+    --border-thickness: 2px
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+header{
+    margin: 20px auto;
+    display: flex;
+    justify-content: end;
+}
+
+header img{
+    height: 50px;
+    width: 50px;
+    background-color: dimgray;
+    border-radius: 10px;
+}
+
+.spacer{
+    border: var(--border-thickness) solid black;
+    border-left: none;
+    border-right: none;
+    padding: 3px;
+}
+
+#main-container{
+    background-color: white;
+    border: var(--border-thickness) solid black;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    display: flex;
+    height: 100%;
+
+}
+
+#left-panel{
+    border: var(--border-thickness) solid black;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    width: 50%;
+    margin-right: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#right-panel{
+    border: var(--border-thickness) solid black;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    width: 50%;
+    margin-left: var(--border-thickness);
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+#right-panel h2{
+    align-self: center;
+    justify-self: center;
+}
+
+form{
+    width: 80%;
+}
+
+#username-div{
+    display: flex;
+    flex-direction: column;
+}
+
+#title-div{
+    display: flex;
+    flex-direction: column;
+}
+
+/*Setting standard formating for form */
+#right-panel input, textarea, label, button{
+    width: 100%;
+    margin: 5px 0px 0px 50px;
+
+}
+
+
+.blog-img{
+    height: 50%;
+    width: 50%;
+    background: linear-gradient(180deg, goldenrod 80%, black);
+    border-radius: 100%;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-size: 350%;
+    color: white;
+}

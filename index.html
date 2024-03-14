@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./assets/css/styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Blog</title>
+</head>
+    <header>
+        <img src="./assets/images/sun.webp" alt="Light/Dark Mode button"/>
+    </header>
+<body>
+    <div class="spacer"></div>
+    <section id="main-container">
+        <div id="left-panel">
+          <div class="blog-img">
+            <h1>My First Blog</h1>
+          </div>
+        </div>
+
+        <div id="right-panel" class = "form-container">
+
+            <h2>What's on your mind?</h2>
+            <form>
+                <div id="username-div">
+                    <label for="username-input">Username:</label>
+                    <input type="text" id="username-input" required/>
+                </div>
+                <div id="title-div">
+                    <label for="title-input">Title:</label>
+                    <input type="text" id="title-input" required/>
+                </div>
+                <div id="content-div">
+                    <label for="content-box">Content:</label>
+                    <textarea id="content-box" required></textarea>
+                </div>
+                <button>Submit</button>
+
+            </form>
+
+        </div>
+    </section>
+
+    <script src="./assets/js/form.js"></script>
+</body>
+</html>
