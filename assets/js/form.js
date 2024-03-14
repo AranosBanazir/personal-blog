@@ -20,8 +20,11 @@ function themeSwitch(){
     } else{
         theme = "day"
         day_night.src = sunPath
+        // iterates over elements with the 'background' class and applys the lightmode
         for (const element of background){
             element.style.backgroundColor = colorLightMode
         }
+
+        
     }
 }

@@ -175,3 +175,14 @@ button{
     font-weight: bold;
     text-align: center;
 }
+
+/* Media Quieries */
+
+@media (max-width: 780px) {
+    #right-panel {
+        flex-wrap: wrap;
+        font-size: smaller;
+        justify-content: center;
+        align-items: center;
+    }
+}
