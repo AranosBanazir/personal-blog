@@ -4,12 +4,14 @@ html{
 
 body{
     height: inherit;
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 
 #blog-post-section{
     display: flex;
-    height: inherit;
+   
     flex-direction: column;
 }
 
@@ -18,9 +20,51 @@ body{
     display: flex;
     flex-direction: column;
     border: 3px solid black;
+    padding: 10px;
     width: auto;
+    margin: 15px;
+    font-size: 75%;
+    justify-content: space-evenly; 
+    border-radius: 5px;
+}
+
+h1{
+    margin: 20px;
+    font: 200%;
+    font-weight: bold;
 }
 
 .spacer{
     border: 1px solid black;
 }
+
+.spacer-2{
+    border: 3px solid black;
+    margin: 5px 0px;
+}
+
+
+
+
+
+.post-container-title{
+    font-weight: bold;
+    font-size: 100%;
+    margin: 3px;
+}
+
+.post-container-content{
+    margin: 5px 0px 0px 5px;
+    line-height: 110%;
+}
+
+.post-container-poster{
+    margin: 10px 0px -3px 5px;
+    font-size: 75%;
+}
+/* TODO Add styling for boxes*/
+/* blogContainer.classList.add('blog-post-container');
+blogHeader.classList.add('post-container-title')
+blogSpacer.classList.add('spacer')
+blogContent.classList.add('post-container-content')
+blogPoster.classList.add('post-container-poster') */

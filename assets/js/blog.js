@@ -1,9 +1,14 @@
 
 
-
+const post = JSON.parse(localStorage.getItem('posts'))
+buildPostContainers(post.length)
 
 function buildPostContainers(repeat){
     repeat = parseInt(repeat)
+    
+    if (repeat > post.length){
+        repeat = post.length
+    }
 
     for (let i = 0; i< (repeat || 1); i++){
     //Elements we need created
@@ -22,11 +27,13 @@ function buildPostContainers(repeat){
     blogPoster.classList.add('post-container-poster')
 
     //Adding id's over itteration
-    blogContainer.setAttribute('id', 'blogPost-container-1');
-    blogHeader.setAttribute('id', 'blogPost-header-1');
-    blogSpacer.setAttribute('id', 'blogPost-spacer-1');
-    blogContent.setAttribute('id', 'blogPost-content-1');
-    blogPoster.setAttribute('id', 'blogPost-poster-1');
+    blogContainer.setAttribute('id', `blogPost-container-${i + 1}`);
+    blogHeader.setAttribute('id', `blogPost-header-${i+ 1}`);
+    blogSpacer.setAttribute('id', `blogPost-spacer-${i+ 1}`);
+    blogContent.setAttribute('id', `blogPost-content-${i+ 1}`);
+    blogPoster.setAttribute('id', `blogPost-poster-${i+ 1}`);
+
+
 
     //appending new elements to section
     const sections = document.getElementById('blog-post-section')
@@ -36,10 +43,29 @@ function buildPostContainers(repeat){
     blogContainer.appendChild(blogContent)
     blogContainer.appendChild(blogPoster)
 
+    //TODO Add Post information to id'ed attributes
+    
+    
+    document.getElementById(`blogPost-header-${i+ 1}`).innerText = post[i].title
+    document.getElementById(`blogPost-content-${i+ 1}`).innerText = post[i].content
+ 
+    document.getElementById(`blogPost-poster-${i+ 1}`).innerText = `Posted by: ${post[i].username}`
+
+
+
+   
+
+
+
+
+
+
+
     }
 
-    // document.body.children["blog-post-section"]["blog-post-container"].appendChild(blogSpacer)
 }
+
+
 
 
 // const blogContainer = document.createElement('div');
