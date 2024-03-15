@@ -8,13 +8,14 @@
 
     <title>My First Blog</title>
 </head>
-<body>
+<body class="background">
     <header><h1>My First Blog</h1>
-        
-        <button></button>
         <div>
+        <button id="back-button"> Back </button>
+            <div id="tooltip-div">
             <img id="day-night-pic" onclick = 'themeSwitch()' src="./assets/images/sun.webp" alt="Light/Dark Mode button"/>
             <p id = "day-night-tooltip"></p>
+            <div>
         </div>
     </header>
     <div class="spacer-2"></div>
@@ -31,4 +32,13 @@
     <script src="./assets/js/blog.js"></script>
     <script src="./assets/js/form.js"></script>
 </body>
+<footer>
+    <section>
+        <ul>
+            <li>Portfolio: </li>
+            <li>Blog: </li>
+            <li>Email: myname@gmail.com</li>
+        </ul>
+    </section>
+</footer>
 </html>

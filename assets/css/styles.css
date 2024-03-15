@@ -22,6 +22,9 @@ header{
     justify-content: end;
 }
 
+a{
+    text-decoration: none;
+}
 /* Day Night image */
 header img{
     height: 50px;
@@ -38,7 +41,7 @@ header img:hover{
     cursor: pointer;
 }
 
-head div{
+header div{
     position: relative;
     display: block;
 }
@@ -154,7 +157,7 @@ form{
 .blog-img{
     height: 50%;
     width: 50%;
-    background: linear-gradient(180deg, goldenrod 80%, black);
+    background: linear-gradient(180deg, yellow 20%, goldenrod 60%, black);
     border-radius: 100%;
     color: white;
     text-align: center;

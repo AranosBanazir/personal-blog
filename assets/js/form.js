@@ -8,7 +8,6 @@ const colorDarkMode = "dimgrey"
 const colorLightMode = "white"
 const background = document.getElementsByClassName("background")
 const labels = document.getElementsByTagName( "label" )
-let themeState = theme || "night"
 const blogPosts = []
 const darkStyle = {
     color: "white",
@@ -23,13 +22,25 @@ const lightStyle = {
 
 //setting starting message for tooltip based on saved theme state
 document.getElementById("day-night-tooltip").innerHTML = "Click to switch to night mode!"
-
-
 loadTheme()
 
 function loadTheme(){
 
     if (theme === "day"){
+        day_night.src = sunPath
+        
+        // iterates over elements with the 'background' class and applys the lightmode
+        for (const element of background){
+            for (const key in lightStyle){
+                element.style[key] = lightStyle[key]
+            }
+        }
+        for (const element of labels){
+            element.style.color = "black"
+        }
+        document.getElementById("day-night-tooltip").innerHTML = "Click to switch to night mode!"
+        
+    }else{
         day_night.src = moonPath
 
         // iterates over elements with the 'background' class and applys the darkmode
@@ -45,20 +56,6 @@ function loadTheme(){
         }
 
         document.getElementById("day-night-tooltip").innerHTML = "Click to switch to day mode!"
-
-    }else{
-        day_night.src = sunPath
-
-        // iterates over elements with the 'background' class and applys the lightmode
-        for (const element of background){
-            for (const key in lightStyle){
-                element.style[key] = lightStyle[key]
-            }
-        }
-        for (const element of labels){
-            element.style.color = "black"
-        }
-        document.getElementById("day-night-tooltip").innerHTML = "Click to switch to night mode!"
 
     }
 }
@@ -110,7 +107,13 @@ function newBlogPost(){
         username,
         title,
         content,
-    }   
+    }  
+
+    if (!username || !title || !content){
+        //returning if there is no information provided in one of the values
+        //Inputs are set to required, and will inform when values are null
+        return;
+    }
     posts.push(newPost)
     localStorage.setItem( 'posts', JSON.stringify(posts)) 
     
@@ -118,3 +121,16 @@ function newBlogPost(){
     // document.getElementById("blog-form").reset()
 }
 
+
+document.getElementById("submit-button").onclick = function(){
+    const username = document.getElementById("username-input").value || undefined
+    const title = document.getElementById("title-input").value || undefined
+    const content = document.getElementById("content-box").value || undefined
+    if (!username || !title || !content){
+        alert("Please fill out the form to subimt a new blog post.\nTo see current posts, please click on 'My First Blog' on the left hand side of the screen")
+    }else{
+        newBlogPost()
+        window.location.href = "./blog.html"
+    }
+    
+}

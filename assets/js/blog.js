@@ -68,19 +68,7 @@ function buildPostContainers(repeat){
 
 
 
-// const blogContainer = document.createElement('div');
-// const sections = document.getElementById('blog-post-section')
-// blogContainer.classList.add('blog-post-container');
+document.getElementById('back-button').onclick = function(){
+    window.location.href = "./index.html"
+}
 
-// document.body.children["blog-post-section"].appendChild(blogContainer)
-// document.getElementsByTagName('div').style.border = '10px solid black'
-
-
-
-
-{/* <div class="post-container">
-<h2 class="post-container-title">this is the title of the post</h2>
-<div class="spacer"></div>
-<p class="post-container-content">This is where the content goes</p>
-<p class="post-container-poster">This is where who posted it goes</p>
-</div> */}

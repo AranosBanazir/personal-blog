@@ -17,8 +17,11 @@
     <div class="spacer"></div>
     <section id="main-container" class = "background">
         <div id="left-panel" class = "background">
+            
           <div class="blog-img">
-            <h1>My First Blog</h1>
+            <a href="./blog.html">
+                <h1>My First Blog</h1>
+            </a>
           </div>
         </div>
 
@@ -38,7 +41,7 @@
                     <label for="content-box">Content:</label>
                     <textarea id="content-box" required></textarea>
                 </div>
-                <button onclick="newBlogPost()"  type="submit">Submit</button>
+                <button id="submit-button">Submit</button>
 
             </form>
 
@@ -47,4 +50,5 @@
 
     <script src="./assets/js/form.js"></script>
 </body>
+    
 </html>
