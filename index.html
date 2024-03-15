@@ -24,7 +24,7 @@
         <div class = "background" id="right-panel" >
 
             <h2>What's on your mind?</h2>
-            <form>
+            <form id="blog-form">
                 <div id="username-div">
                     <label for="username-input">Username:</label>
                     <input type="text" id="username-input" required/>
@@ -37,7 +37,7 @@
                     <label for="content-box">Content:</label>
                     <textarea id="content-box" required></textarea>
                 </div>
-                <button>Submit</button>
+                <button onclick="newBlogPost()" type="button">Submit</button>
 
             </form>
 
