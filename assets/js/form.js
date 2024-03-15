@@ -6,7 +6,15 @@ const moonPath = "./assets/images/moon.png"
 const sunPath  = "./assets/images/sun.webp"
 const colorDarkMode = "dimgrey"
 const colorLightMode = "white"
-let background = document.getElementsByClassName("background")
+const background = document.getElementsByClassName("background")
+const labels = document.getElementsByTagName( "label" )
+let themeState = theme || "day"
+
+
+
+//setting starting message for tooltip based on saved theme state
+document.getElementById("day-night-tooltip").innerHTML = "Click to switch to night mode!"
+
 
 function themeSwitch(){
     if (theme === "day"){
@@ -17,7 +25,14 @@ function themeSwitch(){
         for (const element of background){
             element.style.backgroundColor = colorDarkMode
         }
-    } else{
+
+        for (const element of labels){
+            element.style.color = "white"
+        }
+
+        document.getElementById("day-night-tooltip").innerHTML = "Click to switch to day mode!"
+
+    }else{
         theme = "day"
         day_night.src = sunPath
         // iterates over elements with the 'background' class and applys the lightmode
@@ -25,6 +40,10 @@ function themeSwitch(){
             element.style.backgroundColor = colorLightMode
         }
 
-        
+        for (const element of labels){
+            element.style.color = "black"
+        }
+        document.getElementById("day-night-tooltip").innerHTML = "Click to switch to night mode!"
+
     }
 }

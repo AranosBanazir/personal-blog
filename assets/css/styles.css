@@ -28,6 +28,7 @@ header img{
     width: 50px;
     background-color: transparent;
     border-radius: 10px;
+    margin: 0px 20px;
 }
 
 header img:hover{
@@ -127,7 +128,7 @@ form{
 #right-panel input, textarea, label, button{
     width: 100%;
     margin: 5px 0px 0px 50px;
-
+    font-weight: bold;
 }
 
 #right-panel input, textarea{
