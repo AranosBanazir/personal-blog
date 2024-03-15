@@ -155,8 +155,8 @@ form{
 }
 
 .blog-img{
-    height: 50%;
-    width: 50%;
+    height: 65%;
+    width: 65%;
     background: linear-gradient(180deg, yellow 20%, goldenrod 60%, black);
     border-radius: 100%;
     color: white;

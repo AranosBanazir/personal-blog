@@ -1,8 +1,8 @@
-
-
 const post = JSON.parse(localStorage.getItem('posts'))
 buildPostContainers(post.length)
 
+
+//Using the length of the localStorage for the number of posts to generate HTML Elements
 function buildPostContainers(repeat){
     repeat = parseInt(repeat)
     
@@ -44,22 +44,9 @@ function buildPostContainers(repeat){
     blogContainer.appendChild(blogPoster)
 
     //TODO Add Post information to id'ed attributes
-    
-    
     document.getElementById(`blogPost-header-${i+ 1}`).innerText = post[i].title
     document.getElementById(`blogPost-content-${i+ 1}`).innerText = post[i].content
- 
     document.getElementById(`blogPost-poster-${i+ 1}`).innerText = `Posted by: ${post[i].username}`
-
-
-
-   
-
-
-
-
-
-
 
     }
 

@@ -89,6 +89,11 @@ header #tooltip-div:hover p{
     border-radius: 5px;
 }
 
+.blog-post-container:hover{
+    box-shadow: -3px 3px 2px black;
+    border: 1px solid rgba(0, 255, 255, 0.459);
+}
+
 h1{
     margin: 20px;
     font: 200%;
@@ -126,12 +131,14 @@ h1{
     font-size: 75%;
 }
 
+
+
 footer ul{
     list-style: none;
-
+   
 }
 
 ul li{
-    margin: 10px 0px;
+    margin: 10px 20px;
     font-size: 75%;
 }
