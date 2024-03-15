@@ -2,7 +2,10 @@
 
 
 
-function buildPostContainers(){
+function buildPostContainers(repeat){
+    repeat = parseInt(repeat)
+
+    for (let i = 0; i< (repeat || 1); i++){
     //Elements we need created
     const blogContainer = document.createElement('div');
     const blogHeader = document.createElement('h2')
@@ -18,17 +21,23 @@ function buildPostContainers(){
     blogContent.classList.add('post-container-content')
     blogPoster.classList.add('post-container-poster')
 
+    //Adding id's over itteration
+    blogContainer.setAttribute('id', 'blogPost-container-1');
+    blogHeader.setAttribute('id', 'blogPost-header-1');
+    blogSpacer.setAttribute('id', 'blogPost-spacer-1');
+    blogContent.setAttribute('id', 'blogPost-content-1');
+    blogPoster.setAttribute('id', 'blogPost-poster-1');
 
     //appending new elements to section
-
     const sections = document.getElementById('blog-post-section')
-    
-    
     sections.appendChild(blogContainer)
     blogContainer.appendChild(blogHeader)
     blogContainer.appendChild(blogSpacer)
     blogContainer.appendChild(blogContent)
     blogContainer.appendChild(blogPoster)
+
+    }
+
     // document.body.children["blog-post-section"]["blog-post-container"].appendChild(blogSpacer)
 }
 
