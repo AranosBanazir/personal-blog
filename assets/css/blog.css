@@ -1,0 +1,22 @@
+html{
+    height: 100% ;
+}
+
+body{
+    height: inherit;
+}
+
+#blog-section-container{
+    display: flex;
+}
+
+.post-container{
+    display: flex;
+    flex-direction: column;
+    border: 3px solid black;
+    margin: 20px;
+}
+
+.spacer{
+    border: 1px solid black;
+}
