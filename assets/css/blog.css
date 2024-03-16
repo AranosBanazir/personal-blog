@@ -142,3 +142,28 @@ ul li{
     margin: 10px 20px;
     font-size: 75%;
 }
+
+#delete-div{
+    display: flex;
+    flex-direction: row;
+    font-size: 75%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#delete-div label, select, button{
+    margin: 10px;
+}
+
+#delete-div button{
+    background-color: black;
+    border-radius: 20px;
+    color: white;
+    height: 30px;
+    width: 100px;
+}
+
+footer a{
+    text-decoration: underline;
+    color: inherit;
+}

@@ -21,7 +21,7 @@ const lightStyle = {
 
 
 //setting starting message for tooltip based on saved theme state
-document.getElementById("day-night-tooltip").innerHTML = "Click to switch to night mode!"
+document.getElementById("day-night-tooltip").innerHTML = "Click to switch to dark mode!"
 loadTheme()
 
 function loadTheme(){
@@ -38,7 +38,7 @@ function loadTheme(){
         for (const element of labels){
             element.style.color = "black"
         }
-        document.getElementById("day-night-tooltip").innerHTML = "Click to switch to night mode!"
+        document.getElementById("day-night-tooltip").innerHTML = "Click to switch to dark mode!"
         
     }else{
         day_night.src = moonPath
@@ -55,7 +55,7 @@ function loadTheme(){
             element.style.color = "white"
         }
 
-        document.getElementById("day-night-tooltip").innerHTML = "Click to switch to day mode!"
+        document.getElementById("day-night-tooltip").innerHTML = "Click to switch to light mode!"
 
     }
 }
@@ -77,7 +77,7 @@ function themeSwitch(){
             element.style.color = "white"
         }
 
-        document.getElementById("day-night-tooltip").innerHTML = "Click to switch to day mode!"
+        document.getElementById("day-night-tooltip").innerHTML = "Click to switch to light mode!"
 
     }else{
         theme = "day"
@@ -92,7 +92,7 @@ function themeSwitch(){
         for (const element of labels){
             element.style.color = "black"
         }
-        document.getElementById("day-night-tooltip").innerHTML = "Click to switch to night mode!"
+        document.getElementById("day-night-tooltip").innerHTML = "Click to switch to dark mode!"
 
     }
 }
@@ -123,14 +123,9 @@ function newBlogPost(){
 
 
 document.getElementById("submit-button").onclick = function(){
-    const username = document.getElementById("username-input").value || undefined
-    const title = document.getElementById("title-input").value || undefined
-    const content = document.getElementById("content-box").value || undefined
-    if (!username || !title || !content){
-        alert("Please fill out the form to subimt a new blog post.\nTo see current posts, please click on 'My First Blog' on the left hand side of the screen")
-    }else{
-        newBlogPost()
-        window.location.href = "./blog.html"
-    }
+    
+    newBlogPost()
+    window.location.href = "./blog.html"
+    
     
 }
